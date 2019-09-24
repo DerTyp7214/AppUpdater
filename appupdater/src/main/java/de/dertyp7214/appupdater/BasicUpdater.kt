@@ -25,8 +25,7 @@ object BasicUpdater {
             try {
                 val response = parseJSON(URL(updateUrl).readText(UTF_8))
 
-                //newVersionCode = response.getInt("versionCode")
-                newVersionCode = 2
+                newVersionCode = response.getInt("versionCode")
 
                 fileUrl = response.getString("outputFile")
 

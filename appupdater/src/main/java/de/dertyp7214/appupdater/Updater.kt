@@ -95,6 +95,9 @@ class Updater : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (!forceUpdate) super.onBackPressed()
+        if (!forceUpdate) {
+            super.onBackPressed()
+            BasicUpdater.callback()
+        }
     }
 }
