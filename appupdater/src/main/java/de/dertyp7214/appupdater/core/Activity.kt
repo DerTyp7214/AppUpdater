@@ -29,7 +29,7 @@ fun Activity.checkUpdate(
                     putExtra("versionCode", versionCode)
                     putExtra("forceUpdate", forceUpdate)
                 })
-            }
+            } else callback()
         }
     }
 }

@@ -42,8 +42,7 @@ class UpdateHelper(private val url: String, private val path: String) {
                 }
 
                 override fun onError(error: Error?) {
-                    Log.d("URL", path)
-                    Log.d("ERROR", error?.connectionException?.message ?: "EHH")
+                    finishListener("ERROR", System.currentTimeMillis() - startTime)
                 }
             })
     }

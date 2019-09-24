@@ -11,7 +11,7 @@ import java.io.File
 import java.util.regex.Pattern
 
 object PackageUtils {
-    fun install(context: Activity, file: File) {
+    fun install(context: Activity, file: File, error: () -> Unit) {
         try {
             if (file.exists()) {
                 val fileNameArray =
@@ -39,6 +39,7 @@ object PackageUtils {
         } catch (e: Exception) {
             e.printStackTrace()
             Log.d("install", e.message!!)
+            error()
         }
     }
 

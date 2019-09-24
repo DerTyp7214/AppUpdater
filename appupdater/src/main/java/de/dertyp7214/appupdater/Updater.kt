@@ -89,7 +89,7 @@ class Updater : AppCompatActivity() {
                 else progressBar.progress = progress.toInt()
             }
             .setFinishListener { path, duration ->
-                install(this, File(path))
+                install(this, File(path), BasicUpdater.callback)
             }
             .start()
     }
