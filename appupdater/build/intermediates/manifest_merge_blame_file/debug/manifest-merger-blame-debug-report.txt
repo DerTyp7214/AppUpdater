@@ -1,0 +1,59 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="de.dertyp7214.appupdater"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+9-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:6:5-67
+12-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:8:5-80
+14-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:8:22-77
+15    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+15-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:9:5-83
+15-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:9:22-80
+16
+17    <application
+17-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:11:5-26:19
+18        android:networkSecurityConfig="@xml/network_security_config"
+18-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:12:9-69
+19        tools:targetApi="n" >
+19-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:13:9-28
+20        <activity
+20-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:14:9-16:54
+21            android:name="de.dertyp7214.appupdater.Updater"
+21-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:15:13-36
+22            android:theme="@style/AppUpdaterTheme" />
+22-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:16:13-51
+23
+24        <provider
+24-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:17:9-25:20
+25            android:name="de.dertyp7214.appupdater.GenericFileProvider"
+25-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:18:13-48
+26            android:authorities="dollar_openBracket_applicationId_closeBracket.fileprovider"
+26-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:19:13-64
+27            android:exported="false"
+27-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:20:13-37
+28            android:grantUriPermissions="true" >
+28-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:21:13-47
+29            <meta-data
+29-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:22:13-24:57
+30                android:name="android.support.FILE_PROVIDER_PATHS"
+30-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:23:17-67
+31                android:resource="@xml/provider_paths" />
+31-->C:\Users\Josua\AndroidStudioProjects\AppUpdaterTest\appupdater\src\main\AndroidManifest.xml:24:17-55
+32        </provider>
+33    </application>
+34
+35</manifest>

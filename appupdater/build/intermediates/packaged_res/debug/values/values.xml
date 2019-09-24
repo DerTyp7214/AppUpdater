@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="updaterColor">@android:color/holo_blue_dark</color>
+    <string name="update">Update</string>
+    <style name="AppUpdaterTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="colorAccent">@android:color/holo_blue_dark</item>
+
+        <item name="android:windowLightNavigationBar" ns1:ignore="NewApi">true</item>
+        <item name="android:windowLightStatusBar" ns1:ignore="NewApi">true</item>
+    </style>
+</resources>
