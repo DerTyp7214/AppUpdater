@@ -15,6 +15,7 @@ object BasicUpdater {
     var versionCode: Int = 0
     var newVersionCode: Int = 0
     var forceUpdate: Boolean = false
+    var callback = {}
     lateinit var context: Context
 
     private var fileUrl: String = ""

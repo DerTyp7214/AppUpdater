@@ -10,6 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        checkUpdate(updateUrl = "yourUrl", versionCode = BuildConfig.VERSION_CODE, forceUpdate = true)
+        checkUpdate(
+            updateUrl = "yourUrl",
+            versionCode = BuildConfig.VERSION_CODE,
+            forceUpdate = true
+        ) {
+
+        }
     }
 }

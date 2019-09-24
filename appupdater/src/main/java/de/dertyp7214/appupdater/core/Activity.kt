@@ -12,7 +12,8 @@ fun Activity.checkUpdate(
     clazz: Class<*> = Updater::class.java,
     updateUrl: String,
     versionCode: Int,
-    forceUpdate: Boolean = false
+    forceUpdate: Boolean = false,
+    callback: () -> Unit = {}
 ) {
     PRDownloader.initialize(applicationContext)
     BasicUpdater.apply {
@@ -20,6 +21,7 @@ fun Activity.checkUpdate(
         this.versionCode = versionCode
         this.forceUpdate = forceUpdate
         this.context = this@checkUpdate
+        this.callback = callback
         checkForUpdate { json, _ ->
             if (json.getBoolean("update")) {
                 startActivity(Intent(this@checkUpdate, clazz).apply {

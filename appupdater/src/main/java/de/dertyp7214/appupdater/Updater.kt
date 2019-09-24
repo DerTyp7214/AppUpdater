@@ -63,6 +63,7 @@ class Updater : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 187) {
             finish()
+            BasicUpdater.callback()
         }
     }
 
