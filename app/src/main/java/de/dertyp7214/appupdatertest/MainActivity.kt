@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         checkUpdate(
-            updateUrl = "yourUrl",
+            clazz = null,
+            updateUrl = "https://api.dertyp7214.de/debug",
             versionCode = BuildConfig.VERSION_CODE,
             forceUpdate = true
         ) {

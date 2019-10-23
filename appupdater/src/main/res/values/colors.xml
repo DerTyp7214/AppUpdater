@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="updaterColor">@android:color/holo_blue_dark</color>
+    <color name="updaterColor">#1a73e9</color>
 </resources>

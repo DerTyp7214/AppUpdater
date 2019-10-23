@@ -11,8 +11,8 @@ android {
         applicationId "de.dertyp7214.appupdatertest"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 4
-        versionName "1.4"
+        versionCode 5
+        versionName "1.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,6 +32,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.material:material:1.1.0-alpha10'
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
     implementation project(path: ':appupdater')
 }

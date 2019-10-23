@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.animation.AccelerateDecelerateInterpolator
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
@@ -20,20 +19,17 @@ import kotlinx.android.synthetic.main.activity_updater.*
 import java.io.File
 
 
-class Updater : AppCompatActivity() {
-
+class Updater : UpdaterActivity() {
     private var forceUpdate = false
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_updater)
+    }
 
-        val extras = intent.extras
-
-        if (extras?.containsKey("forceUpdate") == true)
-            forceUpdate = extras.getBoolean("forceUpdate", false)
-
+    @SuppressLint("SetTextI18n")
+    override fun onGetData(versionCode: Int, newVersionCode: Int, forceUpdate: Boolean) {
         newVersion.text = "Version: ${BasicUpdater.newVersionCode}"
 
         downloadBtn.isEnabled = true
