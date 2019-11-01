@@ -1,6 +1,6 @@
 # AppUpdater
 
-[![](https://jitpack.io/v/DerTyp7214/AppUpdater.svg)](https://jitpack.io/#DerTyp7214/AppUpdater)
+[![](https://jitpack.io/v/de.dertyp7214/AppUpdater.svg)](https://jitpack.io/#de.dertyp7214/AppUpdater)
 
 
 ## usage
