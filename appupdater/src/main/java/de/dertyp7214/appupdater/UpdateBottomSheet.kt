@@ -41,7 +41,12 @@ class UpdateBottomSheet(
 
         newVersionText.text = "New Update with the version: $newVersionCode"
 
-        cancelBtn.setOnClickListener { delayed(200) { dismiss() } }
+        cancelBtn.setOnClickListener {
+            delayed(200) {
+                dismiss()
+                BasicUpdater.callback()
+            }
+        }
 
         downloadBtn.setOnClickListener {
 
@@ -64,14 +69,14 @@ class UpdateBottomSheet(
 
     private fun download(activity: Activity, progressBar: ProgressBar, finished: () -> Unit) {
         BasicUpdater.download(null)
-            .addOnProgressListener { progress, bytes, total ->
+            .addOnProgressListener { progress, _, _ ->
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) progressBar.setProgress(
                     progress.toInt(),
                     true
                 )
                 else progressBar.progress = progress.toInt()
             }
-            .setFinishListener { path, duration ->
+            .setFinishListener { path, _ ->
                 finished()
                 PackageUtils.install(activity, File(path), BasicUpdater.callback)
             }

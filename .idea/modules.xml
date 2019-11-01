@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/AppUpdater-app.iml" filepath="$PROJECT_DIR$/app/AppUpdater-app.iml" group="AppUpdaterTest/app" />
+      <module fileurl="file://$PROJECT_DIR$/appupdater/AppUpdater-appupdater.iml" filepath="$PROJECT_DIR$/appupdater/AppUpdater-appupdater.iml" group="AppUpdaterTest/appupdater" />
       <module fileurl="file://$PROJECT_DIR$/AppUpdaterTest.iml" filepath="$PROJECT_DIR$/AppUpdaterTest.iml" group="AppUpdaterTest" />
+      <module fileurl="file://$PROJECT_DIR$/StudioProjects-AppUpdaterTest.iml" filepath="$PROJECT_DIR$/StudioProjects-AppUpdaterTest.iml" group="AppUpdaterTest" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AppUpdaterTest/app" />
       <module fileurl="file://$PROJECT_DIR$/appupdater/appupdater.iml" filepath="$PROJECT_DIR$/appupdater/appupdater.iml" group="AppUpdaterTest/appupdater" />
     </modules>
