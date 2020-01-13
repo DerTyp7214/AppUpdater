@@ -18,7 +18,7 @@ fun AppCompatActivity.checkUpdate(
     updateUrl: String,
     versionCode: Int,
     forceUpdate: Boolean = false,
-    timeout: Long = 1000,
+    timeout: Long = 2000,
     callback: () -> Unit = {}
 ) {
     var checking = true

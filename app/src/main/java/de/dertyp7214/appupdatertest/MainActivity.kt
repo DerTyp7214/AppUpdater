@@ -1,6 +1,7 @@
 package de.dertyp7214.appupdatertest
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import de.dertyp7214.appupdater.core.checkUpdate
 
@@ -16,7 +17,9 @@ class MainActivity : AppCompatActivity() {
             versionCode = BuildConfig.VERSION_CODE,
             forceUpdate = true
         ) {
-
+            runOnUiThread {
+                Toast.makeText(this, "TEEEST", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

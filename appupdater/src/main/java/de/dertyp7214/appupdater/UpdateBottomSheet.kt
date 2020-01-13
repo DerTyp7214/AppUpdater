@@ -3,6 +3,7 @@ package de.dertyp7214.appupdater
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
+import android.content.DialogInterface
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -22,6 +23,8 @@ class UpdateBottomSheet(
     private val forceUpdate: Boolean
 ) :
     BottomSheetDialogFragment() {
+    private var close = true
+
     override fun getTheme(): Int = R.style.BottomSheetDialogTheme
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
@@ -44,7 +47,6 @@ class UpdateBottomSheet(
         cancelBtn.setOnClickListener {
             delayed(200) {
                 dismiss()
-                BasicUpdater.callback()
             }
         }
 
@@ -59,12 +61,24 @@ class UpdateBottomSheet(
             download(
                 activity!!,
                 dialog.window!!.findViewById(R.id.progressBar)
-            ) { dialog.dismiss() }
+            ) {
+                close = false
+                dialog.dismiss()
+            }
 
-            delayed(200) { dismiss() }
+            delayed(200) {
+                close = false
+                dismiss()
+            }
         }
 
         return v
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        if (close) BasicUpdater.callback()
+        close = true
+        super.onDismiss(dialog)
     }
 
     private fun download(activity: Activity, progressBar: ProgressBar, finished: () -> Unit) {
