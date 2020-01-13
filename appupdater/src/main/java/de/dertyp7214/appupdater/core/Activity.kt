@@ -18,8 +18,17 @@ fun AppCompatActivity.checkUpdate(
     updateUrl: String,
     versionCode: Int,
     forceUpdate: Boolean = false,
+    timeout: Long = 1000,
     callback: () -> Unit = {}
 ) {
+    var checking = true
+    Thread {
+        Thread.sleep(timeout)
+        if (checking) {
+            checking = false
+            callback()
+        }
+    }.start()
     if (clazz != null && clazz.isSubclassOf(UpdaterActivity::class)) {
         PRDownloader.initialize(applicationContext)
         BasicUpdater.apply {
@@ -29,7 +38,10 @@ fun AppCompatActivity.checkUpdate(
             this.context = this@checkUpdate
             this.callback = callback
             checkForUpdate { json, _ ->
-                if (json.getBoolean("update")) {
+                if (!checking) {
+                    callback()
+                } else if (json.getBoolean("update")) {
+                    checking = false
                     startActivity(Intent(this@checkUpdate, clazz.java))
                     Log.d("CLAZZ", UpdaterActivity.instance.toString())
                     UpdaterActivity.getInstance(5000, callback) {
@@ -39,7 +51,10 @@ fun AppCompatActivity.checkUpdate(
                             forceUpdate
                         )
                     }
-                } else callback()
+                } else {
+                    checking = false
+                    callback()
+                }
             }
         }
     } else if (clazz == null) {
@@ -51,10 +66,22 @@ fun AppCompatActivity.checkUpdate(
             this.context = this@checkUpdate
             this.callback = callback
             checkForUpdate { json, _ ->
-                if (json.getBoolean("update")) {
-                    UpdateBottomSheet(versionCode, newVersionCode, forceUpdate).show(supportFragmentManager, "")
-                } else callback()
+                if (!checking) {
+                    callback()
+                } else if (json.getBoolean("update")) {
+                    checking = false
+                    UpdateBottomSheet(versionCode, newVersionCode, forceUpdate).show(
+                        supportFragmentManager,
+                        ""
+                    )
+                } else {
+                    checking = false
+                    callback()
+                }
             }
         }
-    } else callback()
+    } else {
+        checking = false
+        callback()
+    }
 }
