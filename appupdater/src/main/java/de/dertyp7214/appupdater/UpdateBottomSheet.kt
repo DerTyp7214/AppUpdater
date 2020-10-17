@@ -20,12 +20,13 @@ import java.io.File
 class UpdateBottomSheet(
     private val versionCode: Int,
     private val newVersionCode: Int,
-    private val forceUpdate: Boolean
+    private val forceUpdate: Boolean,
+    private val dark: Boolean = false
 ) :
     BottomSheetDialogFragment() {
     private var close = true
 
-    override fun getTheme(): Int = R.style.BottomSheetDialogTheme
+    override fun getTheme(): Int = if (dark) R.style.BottomSheetDialogThemeDark else R.style.BottomSheetDialogTheme
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
         BottomSheetDialog(requireContext(), theme)

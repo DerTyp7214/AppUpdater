@@ -18,6 +18,7 @@ fun AppCompatActivity.checkUpdate(
     updateUrl: String,
     versionCode: Int,
     forceUpdate: Boolean = false,
+    dark: Boolean = false,
     timeout: Long = 2000,
     callback: () -> Unit = {}
 ) {
@@ -70,7 +71,7 @@ fun AppCompatActivity.checkUpdate(
                     callback()
                 } else if (json.getBoolean("update")) {
                     checking = false
-                    UpdateBottomSheet(versionCode, newVersionCode, forceUpdate).show(
+                    UpdateBottomSheet(versionCode, newVersionCode, forceUpdate, dark).show(
                         supportFragmentManager,
                         ""
                     )

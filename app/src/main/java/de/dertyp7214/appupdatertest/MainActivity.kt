@@ -14,8 +14,9 @@ class MainActivity : AppCompatActivity() {
         checkUpdate(
             clazz = null,
             updateUrl = "https://api.dertyp7214.de/debug",
-            versionCode = BuildConfig.VERSION_CODE,
-            forceUpdate = true
+            versionCode = 10,
+            forceUpdate = true,
+            dark = false
         ) {
             runOnUiThread {
                 Toast.makeText(this, "TEEEST", Toast.LENGTH_LONG).show()
