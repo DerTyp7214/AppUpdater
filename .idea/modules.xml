@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidStudioProjects-AppUpdaterTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidStudioProjects-AppUpdaterTest.iml" group="AppUpdaterTest" />
-      <module fileurl="file://$PROJECT_DIR$/app/AppUpdater-app.iml" filepath="$PROJECT_DIR$/app/AppUpdater-app.iml" group="AppUpdaterTest/app" />
-      <module fileurl="file://$PROJECT_DIR$/appupdater/AppUpdater-appupdater.iml" filepath="$PROJECT_DIR$/appupdater/AppUpdater-appupdater.iml" group="AppUpdaterTest/appupdater" />
-      <module fileurl="file://$PROJECT_DIR$/AppUpdaterTest.iml" filepath="$PROJECT_DIR$/AppUpdaterTest.iml" group="AppUpdaterTest" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AppUpdaterTest-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AppUpdaterTest-app.iml" group="AppUpdaterTest/app" />
-      <module fileurl="file://$PROJECT_DIR$/StudioProjects-AppUpdaterTest.iml" filepath="$PROJECT_DIR$/StudioProjects-AppUpdaterTest.iml" group="AppUpdaterTest" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AppUpdaterTest/app" />
-      <module fileurl="file://$PROJECT_DIR$/appupdater/appupdater.iml" filepath="$PROJECT_DIR$/appupdater/appupdater.iml" group="AppUpdaterTest/appupdater" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appupdater/com.github.DerTyp7214-appupdater.iml" filepath="$PROJECT_DIR$/.idea/modules/appupdater/com.github.DerTyp7214-appupdater.iml" group="AppUpdaterTest/appupdater" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AppUpdaterTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AppUpdaterTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AppUpdaterTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AppUpdaterTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appupdater/AppUpdaterTest.appupdater.iml" filepath="$PROJECT_DIR$/.idea/modules/appupdater/AppUpdaterTest.appupdater.iml" />
     </modules>
   </component>
 </project>
